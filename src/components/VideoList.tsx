@@ -1,10 +1,10 @@
 import React from "react";
 import VideoItem from "./VideoItem";
-import { ApiObject } from "./Types";
+import { VideoObject } from "./Types";
 
 type Props = {
-    videos: Array<ApiObject>
-    onVideoSelect: (video: ApiObject) => void
+    videos: VideoObject[]
+    onVideoSelect: (video?: VideoObject) => void
 }
 
 const VideoList = ({videos, onVideoSelect}: Props) => {
