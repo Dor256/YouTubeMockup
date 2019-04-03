@@ -4,17 +4,17 @@ import youtube from "../apis/youtube"
 import { AxiosResponse } from "axios";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
-import { ApiObject } from "./Types";
+import { ApiObject, VideoObject } from "../Types";
 
 type Props = {}
 
 type State = {
     videos: ApiObject[]
-    selectedVideo: ApiObject
+    selectedVideo?: VideoObject
 }
 
 class App extends React.Component<Props, State> {
-    state = {videos: [], selectedVideo: null};
+    state = {videos: [], selectedVideo: undefined};
 
     onTermSubmit = (term: string): void => {
         youtube.get("/search", {
@@ -29,7 +29,7 @@ class App extends React.Component<Props, State> {
         });
     }
 
-    onVideoSelect = (video: ApiObject) => {
+    onVideoSelect = (video?: VideoObject) => {
         this.setState({selectedVideo: video});
     }
 

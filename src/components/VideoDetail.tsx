@@ -1,5 +1,5 @@
 import React from "react";
-import {BaseProps} from "./Types"
+import {BaseProps} from "../Types"
 
 
 const VideoDetail = ({video}: BaseProps) => {
