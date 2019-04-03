@@ -9,7 +9,7 @@ import { ApiObject } from "./Types";
 type Props = {}
 
 type State = {
-    videos: Array<ApiObject>
+    videos: ApiObject[]
     selectedVideo: ApiObject
 }
 

@@ -3,7 +3,7 @@ import VideoItem from "./VideoItem";
 import { ApiObject } from "./Types";
 
 type Props = {
-    videos: Array<ApiObject>
+    videos: ApiObject[]
     onVideoSelect: (video: ApiObject) => void
 }
 
