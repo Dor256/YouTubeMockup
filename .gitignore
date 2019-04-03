@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/src/apis/youtube.ts
 /.pnp
 .pnp.js
 
